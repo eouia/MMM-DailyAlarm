@@ -3,7 +3,7 @@
 }
 
 #DAILYALARM .after {
-  color:#F00;
+  color:#F99;
 }
 
 #DAILYALARM .before .time.humanized::before {
@@ -20,4 +20,18 @@
 
 #DAILYALARM .after .time::before {
   content: "+";
+}
+
+#DAILYALARM .time {
+
+}
+
+#DAILYALARM .text {
+  font-weight:bold;
+}
+
+#DAILYALARM .myClass {
+  background-color:rgba(255,255,255,0.2);
+  border-radius:5px;
+  padding:5px;
 }

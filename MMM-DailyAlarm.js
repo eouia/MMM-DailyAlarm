@@ -7,13 +7,12 @@ Module.register("MMM-DailyAlarm", {
       time: "",
       showAt: "00:00:00",
       hideAt: "23:59:59",
-      exceptDays: ["SAT", "SUN"], // [] for all days, available values : MON, TUE, WED, THU, FRI, SAT, SUN
+      exceptDays: [], // [] for all days, available values : MON, TUE, WED, THU, FRI, SAT, SUN
       customClass: "", //If you want to set custom CSS class to this event.
       beforeText: "Alarm",
       afterText: "", //If omitted or null or "", `beforeText` will be used after time.
       alarmSound: "", //path for alarm sound,
       humanize: false,
-      notification: "",
       alarmNotification: {
         notification: null,
         payload: {}
@@ -104,7 +103,7 @@ Module.register("MMM-DailyAlarm", {
   },
 
   draw: function(ev) {
-    const DAYS = ["SUN", "MON", "TUE", "WED", "THR", "FRI", "SAT", "SUN"]
+    const DAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
     var now = new moment()
     var isVisible = (now.isAfter(ev.showAt) && now.isBefore(ev.hideAt))
     var isExcept = ev.exceptDays.includes(DAYS[ev.time.isoWeekday()])
