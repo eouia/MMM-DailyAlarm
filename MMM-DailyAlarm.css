@@ -1,0 +1,23 @@
+#DAILYALARM .before {
+  color:#999;
+}
+
+#DAILYALARM .after {
+  color:#F00;
+}
+
+#DAILYALARM .before .time.humanized::before {
+  content: none;
+}
+
+#DAILYALARM .before .time::before {
+  content: "-";
+}
+
+#DAILYALARM .after .time.humanized::before {
+  content: none;
+}
+
+#DAILYALARM .after .time::before {
+  content: "+";
+}
