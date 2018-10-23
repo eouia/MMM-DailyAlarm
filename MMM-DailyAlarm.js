@@ -141,18 +141,18 @@ Module.register("MMM-DailyAlarm", {
         var wrapper = document.getElementById("DAILYALARM")
         wrapper.appendChild(event)
       }
-    }
-    if (!ev.passed) {
-      if (isPassed) {
-        ev.passed = true
-        if (ev.alarmNotification.notification) {
-          var payload = ev.alarmNotification.payload
-          this.sendNotification(ev.alarmNotification.notification, payload)
-        }
-        if (ev.alarmSound) {
-          var audio = document.getElementById("DA_AUDIO")
-          audio.src = "/modules/MMM-DailyAlarm/resources/" + ev.alarmSound
-          audio.play()
+      if (!ev.passed) {
+        if (isPassed) {
+          ev.passed = true
+          if (ev.alarmNotification.notification) {
+            var payload = ev.alarmNotification.payload
+            this.sendNotification(ev.alarmNotification.notification, payload)
+          }
+          if (ev.alarmSound) {
+            var audio = document.getElementById("DA_AUDIO")
+            audio.src = "/modules/MMM-DailyAlarm/resources/" + ev.alarmSound
+            audio.play()
+          }
         }
       }
     }
