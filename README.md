@@ -2,6 +2,7 @@
 MagicMirror module for daily recurrent event alarms
 
 ## Screenshot
+![Screenshot](https://raw.githubusercontent.com/eouia/MMM-DailyAlarm/master/sc.png)
 
 ## Features
 - Showing time remained & passed for daily recurrent events
